@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block body %}
+Food Choices:
+<ul>
+  {% for food in food %}
+  <li>{{ food.type }}</li>
+  {% empty %}
+  <li>No Foods Available</li>
+  {% endfor %}
+</ul>
+{% endblock %}
